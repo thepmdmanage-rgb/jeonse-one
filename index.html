@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>전세ONE · 전세사기 원스톱 대응</title>
+  <meta name="description" content="전세사기 예방·대응 원스톱 정보 도구. 상황별 체크리스트, 보증금 위험도 계산기, 증거함, 자원지도, 서류 템플릿. 참고용이며 법률자문이 아닙니다." />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#256EF4" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- PWA / 아이콘 -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="전세ONE" />
+
+  <!-- 공유 미리보기 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="전세ONE" />
+  <meta property="og:title" content="전세ONE · 전세사기 원스톱 대응" />
+  <meta property="og:description" content="상황별 체크리스트·보증금 위험도 계산기·증거함·자원지도·서류 템플릿. 참고용 정보 도구." />
+  <meta property="og:image" content="assets/icons/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="전세ONE · 전세사기 원스톱 대응" />
+  <meta name="twitter:description" content="전세사기 예방·대응 원스톱 정보 도구." />
+
+  <!-- 폰트: Pretendard (CDN 1개 허용). 차단 시 system 폴백 -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    media="all"
+  />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <button id="btn-back" class="iconbtn back-arrow hidden" type="button" aria-label="뒤로가기"></button>
+      <a id="brand-home" href="#/" class="app-header__title" style="text-decoration:none;color:inherit" aria-label="전세ONE 처음으로">
+        <span id="app-header-title">전세ONE</span>
+      </a>
+      <button id="btn-theme" class="iconbtn" type="button" aria-label="테마 전환">🌙</button>
+    </header>
+
+    <main id="app" class="app-main" role="main" tabindex="-1"></main>
+
+    <div id="cta-bar" class="cta-bar hidden" role="region" aria-label="주요 동작"></div>
+  </div>
+
+  <div id="toast-wrap" class="toast-wrap" aria-live="polite" aria-atomic="true"></div>
+
+  <noscript>
+    <div style="padding:24px;max-width:480px;margin:0 auto;font-family:system-ui,sans-serif">
+      이 사이트는 자바스크립트가 필요합니다. 브라우저에서 자바스크립트를 켜고 다시 열어주세요.
+    </div>
+  </noscript>
+
+  <!-- 스크립트 로드 순서 (계약 §1.2). type="module" 금지. -->
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/risk.js"></script>
+  <!-- file:// 폴백용 데이터 번들. http 에서는 JSON 이 정본이라 사용되지 않음. -->
+  <script src="data/_bundle.js"></script>
+  <script src="assets/js/views/home.js"></script>
+  <script src="assets/js/views/stage.js"></script>
+  <script src="assets/js/views/calc.js"></script>
+  <script src="assets/js/views/evidence.js"></script>
+  <script src="assets/js/views/resources.js"></script>
+  <script src="assets/js/views/region.js"></script>
+  <script src="assets/js/views/reject.js"></script>
+  <script src="assets/js/views/template.js"></script>
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- PWA: 서비스워커 등록 (오프라인 열람). http(s)에서만 동작, file://·구형은 무시 -->
+  <script>
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {/* 무시: 미지원/차단 시 일반 웹으로 동작 */});
+      });
+    }
+  </script>
+</body>
+</html>

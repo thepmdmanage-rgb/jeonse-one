@@ -1,0 +1,20 @@
+{
+  "name": "전세ONE · 전세사기 원스톱 대응",
+  "short_name": "전세ONE",
+  "description": "전세사기 예방·대응 원스톱 정보 도구. 상황별 체크리스트, 보증금 위험도 계산기, 증거함, 자원지도, 서류 템플릿. 참고용이며 법률자문이 아닙니다.",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#256EF4",
+  "categories": ["utilities", "government", "education"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

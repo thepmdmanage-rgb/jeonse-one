@@ -1,0 +1,17 @@
+{
+  "updated": "2026-09-04",
+  "disclaimer": "본 사이트는 전세사기 예방·대응에 필요한 정보를 정리해 제공하는 참고용 도구이며, 법률자문이나 공식 안내가 아닙니다. 개별 사안의 판단과 신청은 반드시 관할 기관·전문가(전세피해지원센터, 대한법률구조공단 등)와 공식 창구를 통해 확인하세요. 제도의 요건·금액·기한은 수시로 바뀌므로 각 항목의 공식 링크에서 최신 내용을 확인해야 합니다.",
+  "storageNotice": "여기에 입력·기록한 내용은 이 기기의 브라우저(localStorage)에만 저장되며 서버나 외부로 전송되지 않습니다. 브라우저 데이터를 지우면 함께 삭제되니, 중요한 기록은 내보내기로 백업하세요.",
+  "officialLinks": [
+    { "id": "molit_rtms", "label": "국토교통부 실거래가 공개시스템", "url": "https://rt.molit.go.kr" },
+    { "id": "hug_support", "label": "전세피해지원센터 (HUG 주택도시보증공사)", "url": "https://www.khug.or.kr" },
+    { "id": "molit_jeonse", "label": "국토교통부 전세사기 피해지원 안내", "url": "https://www.molit.go.kr" },
+    { "id": "iros_registry", "label": "인터넷등기소 (등기부등본 열람)", "url": "https://www.iros.go.kr" },
+    { "id": "klac_legal", "label": "대한법률구조공단", "url": "https://www.klac.or.kr" },
+    { "id": "lh_purchase", "label": "LH 한국토지주택공사", "url": "https://www.lh.or.kr" },
+    { "id": "wetax_local", "label": "위택스 (지방세 납세증명 등)", "url": "https://www.wetax.go.kr" },
+    { "id": "hometax_nts", "label": "홈택스 (국세 납세증명 등)", "url": "https://www.hometax.go.kr" },
+    { "id": "gov24", "label": "정부24 (전입신고·확정일자 등)", "url": "https://www.gov.kr" },
+    { "id": "court_lease", "label": "대법원 전자민원센터 (임차권등기명령 안내)", "url": "https://www.scourt.go.kr" }
+  ]
+}

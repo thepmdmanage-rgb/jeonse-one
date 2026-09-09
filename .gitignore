@@ -1,0 +1,8 @@
+# 내부 파이프라인 작업물(배포 불필요)
+_workspace/
+
+# OS / 편집기
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log

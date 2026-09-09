@@ -1,0 +1,120 @@
+/* tokens.css — 디자인 토큰 (라이트/다크, 신호등 3색, 타입/스페이싱/radius) */
+/* 변수명은 계약(§6.1). 변경 시 컴포넌트가 깨짐. */
+
+:root {
+  /* 색상 — 라이트 */
+  --bg: #F7F8FA;
+  --surface: #FFFFFF;
+  --surface-2: #F1F3F6;
+  --ink: #191F28;
+  --ink-2: #4E5968;
+  --muted: #8B95A1;
+  --line: #E5E8EB;
+
+  /* brand — KRDS(정부 디자인시스템) primary 계열 institutional blue 오마주 */
+  --brand: #256EF4;
+  --brand-2: #1B4FD6;
+  --brand-soft: #E6EEFE;
+
+  --safe: #12B76A;
+  --safe-soft: #E7F7EF;
+  --warn: #F79009;
+  --warn-soft: #FEF3E2;
+  --danger: #F04438;
+  --danger-soft: #FEECEB;
+
+  /* 반경 */
+  --radius: 20px;
+  --radius-sm: 14px;
+  --radius-pill: 999px;
+
+  /* 그림자 */
+  --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 8px 24px -12px rgba(16, 24, 40, .12);
+  --shadow-lg: 0 4px 12px rgba(16, 24, 40, .08), 0 20px 48px -16px rgba(16, 24, 40, .24);
+
+  /* 스페이싱 스케일 (4/8/12/16/20/24/32/40) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+
+  /* 타이포 */
+  --font: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+
+  /* 타입 스케일 — KRDS/정부 접근성 오마주: 본문 상향(16→18)으로 시안성·가독성 강화.
+     레이아웃(스페이싱·radius)은 px 고정이라 글자만 커지고 구조는 유지된다. */
+  --fs-display: 2rem;      /* 32 */
+  --fs-h1: 1.625rem;       /* 26 */
+  --fs-h2: 1.375rem;       /* 22 */
+  --fs-h3: 1.1875rem;      /* 19 */
+  --fs-body: 1.125rem;     /* 18 */
+  --fs-sm: 1rem;           /* 16 */
+  --fs-caption: 0.8125rem; /* 13 */
+
+  /* 레이아웃 */
+  --app-max: 480px;
+  --header-h: 56px;
+  --cta-h: 76px;
+
+  color-scheme: light;
+}
+
+/* 다크 — 수동 토글 */
+:root[data-theme="dark"] {
+  --bg: #0F1216;
+  --surface: #171B21;
+  --surface-2: #1E242C;
+  --ink: #EAECEF;
+  --ink-2: #B0B8C1;
+  --muted: #7A828C;
+  --line: #262C34;
+
+  --brand: #5A9BFF;
+  --brand-2: #3182F6;
+  --brand-soft: #12233F;
+
+  --safe: #3DDC97;
+  --safe-soft: #0F2A20;
+  --warn: #F5A94A;
+  --warn-soft: #2A2011;
+  --danger: #FF6B5E;
+  --danger-soft: #2E1614;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, .4), 0 20px 48px -16px rgba(0, 0, 0, .6);
+
+  color-scheme: dark;
+}
+
+/* 다크 — 시스템 설정 (사용자가 light를 명시하지 않은 경우) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1216;
+    --surface: #171B21;
+    --surface-2: #1E242C;
+    --ink: #EAECEF;
+    --ink-2: #B0B8C1;
+    --muted: #7A828C;
+    --line: #262C34;
+
+    --brand: #5A9BFF;
+    --brand-2: #3182F6;
+    --brand-soft: #12233F;
+
+    --safe: #3DDC97;
+    --safe-soft: #0F2A20;
+    --warn: #F5A94A;
+    --warn-soft: #2A2011;
+    --danger: #FF6B5E;
+    --danger-soft: #2E1614;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, .4), 0 20px 48px -16px rgba(0, 0, 0, .6);
+
+    color-scheme: dark;
+  }
+}

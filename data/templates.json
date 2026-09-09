@@ -1,0 +1,38 @@
+{
+  "updated": "2026-09-04",
+  "items": [
+    {
+      "id": "content-certification",
+      "title": "내용증명 · 보증금 반환 청구",
+      "desc": "임대인에게 전세보증금 반환을 공식적으로 요구하는 내용증명 예시입니다. 법률자문이 아니며, 실제 발송 전 전문가·공식 창구의 확인을 권장합니다. 우체국 내용증명으로 발송하면 청구 시점을 증명할 수 있습니다.",
+      "fields": [
+        { "key": "senderName", "label": "보내는 사람(임차인) 이름", "type": "text", "required": true },
+        { "key": "senderAddress", "label": "보내는 사람 주소", "type": "text", "required": true },
+        { "key": "senderContact", "label": "보내는 사람 연락처", "type": "text", "required": false },
+        { "key": "receiverName", "label": "받는 사람(임대인) 이름", "type": "text", "required": true },
+        { "key": "receiverAddress", "label": "받는 사람 주소", "type": "text", "required": true },
+        { "key": "propertyAddress", "label": "임차 목적물(집) 주소", "type": "text", "required": true },
+        { "key": "deposit", "label": "전세보증금액(원)", "type": "number", "required": true },
+        { "key": "contractDate", "label": "임대차계약 체결일", "type": "date", "required": false },
+        { "key": "endDate", "label": "임대차 종료(만료)일", "type": "date", "required": false },
+        { "key": "dueDate", "label": "반환 요구 기한", "type": "date", "required": true }
+      ],
+      "body": "제목: 전세보증금 반환 청구의 건\n\n수신인: {{receiverName}}\n주소: {{receiverAddress}}\n\n발신인: {{senderName}}\n주소: {{senderAddress}}\n연락처: {{senderContact}}\n\n1. 귀하의 무궁한 발전을 기원합니다.\n\n2. 발신인은 아래 목적물에 관하여 귀하와 임대차계약({{contractDate}} 체결)을 맺고 전세보증금 {{deposit}}원을 지급한 임차인입니다.\n   - 임차 목적물: {{propertyAddress}}\n   - 임대차 종료일: {{endDate}}\n\n3. 위 임대차는 종료되었거나 종료가 예정되어 있음에도 보증금이 반환되지 않았습니다. 이에 발신인은 귀하에게 전세보증금 {{deposit}}원을 {{dueDate}}까지 발신인에게 반환하여 주실 것을 청구합니다.\n\n4. 위 기한까지 반환이 이루어지지 않을 경우, 발신인은 임차권등기명령 신청, 보증금반환청구 소송 등 법적 조치를 진행할 수 있으며 이에 따른 지연이자·비용이 발생할 수 있음을 알려드립니다.\n\n5. 본 내용증명은 보증금 반환 청구의 의사와 시점을 명확히 하기 위한 것입니다.\n\n발신일: (발송일을 기재하세요)\n발신인 {{senderName}} (서명 또는 날인)\n",
+      "output": ["txt", "print"]
+    },
+    {
+      "id": "lease-terminate-notice",
+      "title": "임대차 계약 갱신거절 · 종료 통지",
+      "desc": "계약 만료로 임대차를 종료(갱신 거절)하겠다는 의사를 임대인에게 통지하는 예시입니다. 법률자문이 아니며, 통지 기한·방법은 계약 내용과 관련 법령에 따라 다를 수 있으니 확인하세요.",
+      "fields": [
+        { "key": "senderName", "label": "보내는 사람(임차인) 이름", "type": "text", "required": true },
+        { "key": "receiverName", "label": "받는 사람(임대인) 이름", "type": "text", "required": true },
+        { "key": "propertyAddress", "label": "임차 목적물(집) 주소", "type": "text", "required": true },
+        { "key": "endDate", "label": "임대차 종료(만료)일", "type": "date", "required": true },
+        { "key": "deposit", "label": "전세보증금액(원)", "type": "number", "required": false }
+      ],
+      "body": "제목: 임대차계약 종료(갱신 거절) 통지의 건\n\n수신인: {{receiverName}}\n발신인: {{senderName}}\n\n1. 발신인은 아래 목적물의 임차인입니다.\n   - 임차 목적물: {{propertyAddress}}\n\n2. 발신인은 위 임대차계약을 종료일({{endDate}})의 만료로써 종료하고자 하며, 갱신을 원하지 않음을 통지합니다.\n\n3. 이에 종료일에 맞추어 전세보증금 {{deposit}}원의 반환 및 목적물의 인도 절차를 협의하고자 하오니, 반환 일정에 대하여 회신하여 주시기 바랍니다.\n\n발신일: (발송일을 기재하세요)\n발신인 {{senderName}} (서명 또는 날인)\n",
+      "output": ["txt", "print"]
+    }
+  ]
+}

@@ -89,5 +89,14 @@
       });
     }
   </script>
+  <!-- 익명 방문 통계 (GoatCounter · 쿠키리스 · 개인 미식별) -->
+  <script data-goatcounter="https://ksa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    addEventListener('hashchange', function () {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: location.pathname + location.hash });
+      }
+    });
+  </script>
 </body>
 </html>

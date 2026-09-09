@@ -64,7 +64,7 @@
 
       // 면책 축약
       frag.appendChild(U.el('div', { class: 'disclaimer-line', style: 'margin-top:24px' }, [
-        '법률자문이 아닌 참고용 정보입니다. 개별 사안은 공식 창구에서 확인하세요. ',
+        '전세원은, 1인가구협회가 1인가구 및 혼자서 전월세 계약하시는 분들을 위해 만든 법률자문이 아닌 참고용 정보입니다. 개별 사안은 공식 창구에서 확인하세요. ',
         U.el('a', { href: '#/about' }, '자세히 보기'),
         ' · ',
         U.el('a', { href: 'privacy.html' }, '개인정보·이용안내')

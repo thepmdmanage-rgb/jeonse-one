@@ -31,13 +31,13 @@
     var frag = document.createDocumentFragment();
     frag.appendChild(U.el('div', { class: 'stack', style: 'margin-bottom:16px' }, [
       U.el('h1', { class: 't-h1' }, '지역 지원 조회'),
-      U.el('p', { class: 't-body t-ink2' }, '시·도와 구·군을 고르면 지자체 주거 지원(이사비·월세 등)을 볼 수 있어요.')
+      U.el('p', { class: 't-body t-ink2' }, '시·도를 고르면 전세피해 상담 창구와 지자체 주거 지원을 볼 수 있어요.')
     ]));
 
     // 예시 데이터 안내
     frag.appendChild(U.el('div', { class: 'banner banner--warn', style: 'margin-bottom:16px' }, [
       U.el('span', { class: 'banner__icon', 'aria-hidden': 'true' }, '⚠️'),
-      U.el('div', {}, '아래 지원 항목은 구조를 보여주는 예시입니다. 실제 시행 여부·금액·요건은 각 지자체 공식 안내에서 확인하세요.')
+      U.el('div', {}, '전세피해 상담 창구는 공식 정보입니다. ⚠️ 표시가 붙은 지자체 지원(이사비·월세 등)은 예시이니, 시행 여부·금액·요건은 각 지자체 공식 안내에서 확인하세요.')
     ]));
 
     var sidoSel = U.el('select', { class: 'select', 'aria-label': '시도 선택' }, [

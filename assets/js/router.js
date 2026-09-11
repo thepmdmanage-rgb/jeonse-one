@@ -103,7 +103,13 @@
 
     // 헤더 타이틀
     if (header) {
-      header.textContent = (typeof view.title === 'function' ? view.title(ctx) : view.title) || '전세ONE';
+      if (ctx.view === 'home') {
+        header.innerHTML = '<span class="brand-wm">전세<b>ONE</b></span><span class="brand-tag">안전한 전세, 든든한 내일</span>';
+        header.classList.add('is-home');
+      } else {
+        header.textContent = (typeof view.title === 'function' ? view.title(ctx) : view.title) || '전세ONE';
+        header.classList.remove('is-home');
+      }
     }
     // 뒤로가기 버튼: 홈에서는 숨김
     if (backBtn) {

@@ -77,6 +77,20 @@
 .pick__chev { flex: 0 0 auto; color: var(--muted); font-size: 22px; }
 .pick__chev::before { content: "›"; }
 
+/* 아이콘 타일 (번호 대체) */
+.pick__ic {
+  flex: 0 0 auto;
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border-radius: var(--radius-sm);
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+.pick__ic svg { width: 24px; height: 24px; display: block; }
+/* 사고 발생 = 위험 톤 */
+.pick.is-danger .pick__ic { background: var(--danger-soft); color: var(--danger); }
+.pick.is-danger:hover { border-color: var(--danger); }
+
 /* ===== 칩/태그 ===== */
 .chip {
   display: inline-flex;
